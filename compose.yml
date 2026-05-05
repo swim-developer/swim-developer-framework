@@ -1,0 +1,15 @@
+services:
+  sonarqube:
+    image: docker.io/library/sonarqube:25.4.0.105899-community
+    container_name: swim-framework-sonarqube
+    environment:
+      SONAR_FORCEAUTHENTICATION: "false"
+      SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: "true"
+    ports:
+      - "9000:9000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/api/system/status"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+      start_period: 30s

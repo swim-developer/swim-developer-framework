@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" font-family="Arial, sans-serif">
+
+  <text x="350" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#212121">swim-developer-framework</text>
+
+  <rect x="250" y="40" width="200" height="70" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="350" y="65" text-anchor="middle" font-size="12" font-weight="bold" fill="#b71c1c">swim-framework-core</text>
+  <text x="350" y="81" text-anchor="middle" font-size="10" fill="#546e7a">SPIs / domain types / health</text>
+  <text x="350" y="95" text-anchor="middle" font-size="10" fill="#546e7a">security / validation</text>
+
+  <rect x="20" y="160" width="190" height="60" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="115" y="184" text-anchor="middle" font-size="11" font-weight="bold" fill="#1b5e20">swim-framework-consumer</text>
+  <text x="115" y="200" text-anchor="middle" font-size="10" fill="#546e7a">AMQP receive / subscription</text>
+  <text x="115" y="213" text-anchor="middle" font-size="10" fill="#546e7a">heartbeat / inbox/outbox</text>
+
+  <rect x="490" y="160" width="190" height="60" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="585" y="184" text-anchor="middle" font-size="11" font-weight="bold" fill="#0d47a1">swim-framework-provider</text>
+  <text x="585" y="200" text-anchor="middle" font-size="10" fill="#546e7a">AMQP publish / heartbeat gen</text>
+  <text x="585" y="213" text-anchor="middle" font-size="10" fill="#546e7a">subscription expiry / purge</text>
+
+  <rect x="170" y="240" width="160" height="34" rx="6" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1"/>
+  <text x="250" y="261" text-anchor="middle" font-size="10" fill="#4a148c">persistence-mongodb</text>
+
+  <rect x="370" y="240" width="160" height="34" rx="6" fill="#e0f2f1" stroke="#00695c" stroke-width="1"/>
+  <text x="450" y="261" text-anchor="middle" font-size="10" fill="#004d40">leader-kubernetes / -infinispan</text>
+
+  <line x1="280" y1="110" x2="190" y2="160" stroke="#757575" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="420" y1="110" x2="510" y2="160" stroke="#757575" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="300" y1="110" x2="250" y2="240" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrg)"/>
+  <line x1="400" y1="110" x2="450" y2="240" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrg)"/>
+
+  <defs>
+    <marker id="arr" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#757575"/>
+    </marker>
+    <marker id="arrg" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#bdbdbd"/>
+    </marker>
+  </defs>
+
+</svg>
