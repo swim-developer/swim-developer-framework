@@ -6,6 +6,7 @@ import java.util.List;
 
 public interface SwimProviderEventStorePort {
 
+    @SuppressWarnings("java:S1452")
     List<? extends SwimProviderEvent> findPendingDelivery(int batchSize);
 
     SwimProviderEvent findDomainById(String eventId);

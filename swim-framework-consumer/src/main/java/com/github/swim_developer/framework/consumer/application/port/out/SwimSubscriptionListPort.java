@@ -7,7 +7,9 @@ import java.util.Optional;
 
 public interface SwimSubscriptionListPort {
 
+    @SuppressWarnings("java:S1452")
     List<? extends SwimConsumerSubscription> findActiveSubscriptions();
 
+    @SuppressWarnings("java:S1452")
     Optional<? extends SwimConsumerSubscription> findBySubscriptionId(String subscriptionId);
 }

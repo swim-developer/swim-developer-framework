@@ -6,6 +6,7 @@ import java.util.List;
 
 public interface SwimOutboxEventStorePort {
 
+    @SuppressWarnings("java:S1452")
     List<? extends SwimOutboxEvent> findPendingOutboxEvents(int batchSize);
 
     void updateOutboxEvent(SwimOutboxEvent event);
