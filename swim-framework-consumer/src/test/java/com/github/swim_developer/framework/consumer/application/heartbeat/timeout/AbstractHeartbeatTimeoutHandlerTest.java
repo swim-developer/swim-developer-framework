@@ -91,7 +91,7 @@ class AbstractHeartbeatTimeoutHandlerTest {
 
         handler.onHeartbeatTimeout(event("sub-1"));
 
-        verify(service).handleSubscriptionLost(eq("sub-1"), eq(mockSubscription));
+        verify(service).handleSubscriptionLost("sub-1", mockSubscription);
     }
 
     @Test
@@ -102,7 +102,7 @@ class AbstractHeartbeatTimeoutHandlerTest {
 
         handler.onHeartbeatTimeout(event("sub-1"));
 
-        verify(service).handleSubscriptionLost(eq("sub-1"), eq(mockSubscription));
+        verify(service).handleSubscriptionLost("sub-1", mockSubscription);
     }
 
     @Test
@@ -125,7 +125,7 @@ class AbstractHeartbeatTimeoutHandlerTest {
 
         handler.onHeartbeatTimeout(event("sub-1"));
 
-        verify(service).handleSubscriptionLost(eq("sub-1"), eq(mockSubscription));
+        verify(service).handleSubscriptionLost("sub-1", mockSubscription);
     }
 
     @Test
@@ -137,7 +137,7 @@ class AbstractHeartbeatTimeoutHandlerTest {
 
         handler.onHeartbeatTimeout(event("sub-1"));
 
-        verify(service).handleSubscriptionLost(eq("sub-1"), eq(mockSubscription));
+        verify(service).handleSubscriptionLost("sub-1", mockSubscription);
     }
 
     @Test

@@ -29,9 +29,7 @@ public class AbstractAmqpConsumerManager implements com.github.swim_developer.fr
     private final AmqpConnectionRegistry connectionRegistry;
     private final SubscriptionHeartbeatTracker heartbeatTracker;
     private final ObjectMapper objectMapper;
-
-    @Inject
-    SwimInboxStore inboxStore;
+    private final SwimInboxStore inboxStore;
 
     @ConfigProperty(name = "swim.service.name", defaultValue = "swim")
     String serviceName;
@@ -46,7 +44,7 @@ public class AbstractAmqpConsumerManager implements com.github.swim_developer.fr
     private AmqpConsumerLifecycleManager lifecycleManager;
 
     protected AbstractAmqpConsumerManager() {
-        this(null, null, null, null, null);
+        this(null, null, null, null, null, null);
     }
 
     @Inject
@@ -55,12 +53,14 @@ public class AbstractAmqpConsumerManager implements com.github.swim_developer.fr
             MeterRegistry meterRegistry,
             AmqpConnectionRegistry connectionRegistry,
             SubscriptionHeartbeatTracker heartbeatTracker,
-            ObjectMapper objectMapper) {
+            ObjectMapper objectMapper,
+            SwimInboxStore inboxStore) {
         this.vertx = vertx;
         this.meterRegistry = meterRegistry;
         this.connectionRegistry = connectionRegistry;
         this.heartbeatTracker = heartbeatTracker;
         this.objectMapper = objectMapper;
+        this.inboxStore = inboxStore;
     }
 
     @PostConstruct

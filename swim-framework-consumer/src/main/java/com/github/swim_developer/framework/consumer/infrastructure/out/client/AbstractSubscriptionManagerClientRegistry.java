@@ -60,8 +60,6 @@ public abstract class AbstractSubscriptionManagerClientRegistry<T> implements Sw
 
     protected abstract Class<T> getClientClass();
 
-    public abstract String querySubscriptionStatus(String subscriptionId, ProviderConfiguration provider);
-
     protected URI resolveBaseUri(ProviderConfiguration provider) {
         return URI.create(provider.subscriptionManager().url());
     }

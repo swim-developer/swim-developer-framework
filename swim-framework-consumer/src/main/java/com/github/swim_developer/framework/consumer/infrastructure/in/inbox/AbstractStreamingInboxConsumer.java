@@ -99,9 +99,4 @@ public abstract class AbstractStreamingInboxConsumer implements SwimInboxReader 
         return List.of(rawPayload);
     }
 
-    @Override
-    public abstract void processSingleMessage(InboxEnvelope envelope, String xmlPayload, int index);
-
-    @Override
-    public abstract String getMetricPrefix();
 }

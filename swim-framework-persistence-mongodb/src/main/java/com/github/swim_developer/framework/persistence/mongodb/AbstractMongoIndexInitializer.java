@@ -4,7 +4,6 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.IndexOptions;
-import io.quarkus.runtime.StartupEvent;
 import jakarta.inject.Inject;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.Document;
@@ -26,7 +25,7 @@ public abstract class AbstractMongoIndexInitializer {
 
     protected abstract void defineIndexes(MongoDatabase database);
 
-    public void onStart(StartupEvent event) {
+    public void onStart() {
         log.info("Initializing MongoDB indexes...");
         try {
             MongoDatabase database = mongoClient.getDatabase(getDatabaseName());
