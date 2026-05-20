@@ -29,10 +29,10 @@ public class TlsCertificateReloader {
     public TlsCertificateReloader(
             SwimProviderConfigPort providerConfig,
             AmqpConnectionRegistry amqpRegistry,
-            @ConfigProperty(name = "swim.tls.reload-period", defaultValue = "") String reloadPeriod) {
+            @ConfigProperty(name = "swim.tls.reload-period") Optional<String> reloadPeriod) {
         this.providerConfig = providerConfig;
         this.amqpRegistry = amqpRegistry;
-        this.enabled = reloadPeriod != null && !reloadPeriod.isBlank();
+        this.enabled = reloadPeriod.isPresent() && !reloadPeriod.get().isBlank();
     }
 
     @Scheduled(every = "${swim.tls.reload-period:off}", concurrentExecution = Scheduled.ConcurrentExecution.SKIP)
